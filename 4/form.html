@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+    <form method="get" action="test.php">
+        <fieldset>
+            <legend>Personal Info</legend>
+        <div>
+            <label for="nama">Nama</label>
+            <input type="text" name="nama" id="nama" size="5" maxlength="5" value="budi" readonly title="Nama Kamu">
+        </div>
+        <div>
+            <label for="tgl_lahir" required>Tanggal Lahir</lable>
+            <input type="date" name="tgl_lahir" id="tgl_lahir" disabled>
+        </div>
+        <div>
+            <label>Password</label>
+            <input type="password" name="password" id="password" placeholder="Isi password">
+        </div>
+        <div>
+            <label>Jenis Kelamin</label>
+            <input type="radio" name="jenis_kelamin" id="jenis_kelamin" value="pria" checked> Pria<br>
+            <input type="radio" name="jenis_kelamin" id="jenis_kelamin" value="wania"> Wanita<br>
+        </div>
+        </fieldset>
+        <div>
+            <label>Hobi</label>
+            <input type="checkbox" name="hobi[]" id="hobi" value="tidur"> Tidur<br>
+            <input type="checkbox" name="hobi[]" id="hobi" value="makan"> Makan<br>
+            <input type="checkbox" name="hobi[]" id="hobi" value="traveling"> Traveling<br>
+        </div>
+        <div>
+            <label>Pendidikan terakhir</label>
+            <select name="pendidikan[]" id="pendidikan" size="3" multiple>
+                <option value="">----</option>
+                <option value="sd">SD</option>
+                <option value="smp">SMP</option>
+                <option value="sma" selected>SMA</option>
+                <option value="s1">Sarjana</option>
+                <option value="s2">Magister</option>
+                <option value="s3">Doktor</option>
+            </select>
+        </div>
+        <div>
+            <label>Photo</label>
+            <input type="file" name="photo" id="photo">
+        </div>
+        <div>
+            <label>Keterangan</label>
+            <textarea name="keterangan" id="keterangan" rows="5" cols="100"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Kirim">
+            <input type="reset" value="Reset">
+        </div>
+    </form>
+</body>
+</html>

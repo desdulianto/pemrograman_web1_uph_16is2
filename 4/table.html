@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Table</title>
+    <style type="text/css">
+        table { border-collapse: collapse;
+            caption-side: left;
+        } 
+        td { border: 1px solid black;  }
+        th.bottom {
+            border-bottom: 5px double red; 
+        }
+        th.top {
+            border-top: 1px solid red;
+        }
+        th, td { width: 100px; height: 50px; 
+                 text-align: center;
+                 vertical-align: middle;
+               }
+        div.rotate { transform: rotate(-30deg); }
+        col#nim { font-weight: bold; background-color: #DFFF42}
+        col#jurusan { background-color: #F4B692 }
+    </style>
+</head>
+<body>
+    <table>
+        <colgroup>
+            <col id="nim">
+            <col id="nama">
+            <col id="jurusan" span="2">
+        </colgroup>
+        <thead>
+            <tr><th rowspan="2" class="bottom top"><div class="rotate">NIM</div></th>
+            <th rowspan="2" class="bottom top">Nama</th>
+            <th colspan="2" class="top">Jurusan/Waktu</th>
+        </tr>
+        <tr>
+            <th class="bottom">Kelas</th>
+            <th class="bottom">Waktu</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr><td>22803</td><td>Albert</td><td>16IS2</td>
+            <td>Sore</td>
+        </tr>
+        <tr><td>25015</td><td>Ali Cia Chandra</td><td>16IS2</td>
+            <td>Sore</td>
+        </tr>
+        <tr><td>23157</td><td>Alvin Wijaya</td><td>16IS2</td>
+            <td>Sore</td>
+        </tr>
+        <tr><td>22858</td><td>Anastasia Venessa Tanlim</td><td>16IS2</td>
+            <td>Sore</td>
+        </tr>
+        </tbody>
+        <caption>Daftar Mahasiswa</caption>
+    </table>
+</body>
+</html>
