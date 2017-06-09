@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <title></title>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <h1>Hello Bootstrap</h1>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-3">
+                <h1>Sidebar</h1>
+            </div> <!-- div sidebar -->
+            <div class="col-xs-12 col-sm-12 col-md-9">
+                <h1>Content</h1>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h2>Table</h2>
+                        <table class="table table-hover table-striped">
+                            <thead>
+                            <tr>
+                                <th>NIM</th>
+                                <th>Nama</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>0001</td>
+                                <td>Budi</td>
+                            </tr>
+                            <tr>
+                                <td>0002</td>
+                                <td>Susi</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Kanan</h2>
+                    </div>
+                </div> <!-- div content first row -->
+                <div class="row">
+                    <form>
+                        <div class="form-group">
+                            <label for="name" class="col-md-1">Name</label>
+                            <div class="col-md-4">
+                            <input type="text" name="name" id="name" class="form-control" placeholder="Name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div> <!-- div content form -->
+            </div> <!-- div content -->
+        </div> <!-- div row -->
+    </div> <!-- div container -->
+
+    <script src="jquery-3.2.1.min.js"></script>
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+</body>
+</html>
