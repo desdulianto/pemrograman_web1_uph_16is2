@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<img src="Chrysanthemum.jpg" onclick="changeImg()">
+
+<script type="text/javascript">
+var i = 0
+	function changeImg() {
+		var imgs = ["Chrysanthemum.jpg",
+					"Desert.jpg"]
+		i++
+		if (i >= imgs.length)
+			i = 0
+
+			img = document.querySelector("img")
+		img.src = imgs[i]
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>DOM</h1>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<ul>
+		<li>Satu</li>
+		<li>Dua</li>
+		<li>Tiga</li>
+	</ul>
+	<script type="text/javascript">
+		//document.write("<h1>Hello</h1>")
+		document.title = "Hello DOM"
+		//document.bgColor = "yellow"
+		console.log(document)
+		console.log(document.body)
+		console.log(document.body.children)
+		console.log(document.body.children[0])
+		console.log(document.body.children.length)
+		console.log(document.body.children[document.body.children.
+			length-1])
+		console.log(document.body.firstChild)
+		console.log(document.body.lastChild)
+		h1 = document.body.children[0]
+		console.log("Parent H1: ", h1.parentNode)
+		console.log("Children H1: ", h1.children)
+		console.log("Next Sibling H1: ", h1.nextSibling)
+		console.log("Prev Sibling H1: ", h1.previousSibling)
+		console.log(document.body.childNodes)
+
+		var ul = document.querySelector("ul")	
+		var li = document.createElement("li")
+		li.innerHTML = "Empat"
+		ul.appendChild(li)
+
+		li = document.querySelector("li")
+		ul.removeChild(li)
+		li = document.createElement("li")
+		li.innerHTML = "Lima"
+		ul.insertBefore(li, ul.lastChild)
+		ul.replaceChild(li, ul.lastChild)	
+
+	</script>
+</body>
+</html>

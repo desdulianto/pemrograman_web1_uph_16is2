@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM 1</title>
+</head>
+<body>
+	<input type="text" id="comment"> <button onclick="postComment()">Post</button>
+	<ul id="comments">
+	</ul>
+	<script type="text/javascript">
+		function postComment() {
+			var comment = document.querySelector("#comment")
+			var newComment = document.createElement("li")
+			newComment.innerHTML = comment.value
+			var comments = document.querySelector("#comments")
+			comments.appendChild(newComment)
+			comment.value = ""
+		}
+	</script>
+</body>
+</html>

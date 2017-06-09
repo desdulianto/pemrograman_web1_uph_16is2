@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello JS</title>
+</head>
+<body>
+	<input type="text" id="name">
+	<button onclick="hello()">Click</button>
+	<div id="output"></div>
+	<script type="text/javascript">
+	function hello() {
+		var name = document.getElementById("name")
+		var output = document.getElementById("output")
+		var val
+		if (name.value.trim() === "")
+			val = "world"
+		else
+			val = name.value
+
+		output.innerHTML = "Hello " + val
+	}		
+	</script>
+</body>
+</html>

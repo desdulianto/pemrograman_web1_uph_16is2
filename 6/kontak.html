@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div>
+		<label>Nama</label>
+		<input type="text" id="nama">
+	</div>
+	<div>
+		<label>Alamat</label>
+		<input type="text" id="alamat">
+	</div>
+	<div>
+		<label>Telepon</label>
+		<input type="text" id="telepon">
+	</div>
+	<button onclick="tambahData()">Tambah</button>
+	<table id="kontak">
+	<thead>
+		<tr>
+			<td>Nama</td>
+			<td>Alamat</td>
+			<td>Telepon</td>
+		</tr>
+
+	</thead>
+	<tbody>		
+	</tbody>
+	</table>
+
+	<script>
+		function tambahData() {
+			// baca input
+			var nama = document.querySelector("#nama")
+			var alamat = document.querySelector("#alamat")
+			var telepon = document.querySelector('#telepon')
+			
+			// tambahkan tr baru dan td baru
+			var tr = document.createElement("tr")
+			var td = document.createElement("td")
+			td.innerHTML = nama.value
+			tr.appendChild(td)
+			td = document.createElement("td")
+			td.innerHTML = alamat.value
+			tr.appendChild(td)
+			td = document.createElement("td")
+			td.innerHTML = telepon.value
+			tr.appendChild(td)
+			// insert ke table
+			var table = document.querySelector("#kontak")
+			table.querySelector("tbody").appendChild(tr)
+
+			// kosongkan input
+			nama.value = ""
+			alamat.value = ""
+			telepon.value = ""
+		}
+	</script>
+</body>
+</html>
