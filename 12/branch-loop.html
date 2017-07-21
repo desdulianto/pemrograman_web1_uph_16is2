@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="app">
+		<input type="text" v-model="nama"><button @click="tambah">Tambah</button>
+		<ul>
+			<element v-for="t in teman">
+				<li v-html="t"></li>
+			</element>
+		</ul>
+		<ul>
+			<element v-for="i in angka">
+				<li v-if="i % 2 === 0">{{i}}</li>
+			</element>
+		</ul>
+		<ul>
+			<element v-for="t in teman">
+				<li v-if="t.endsWith('i')">{{t}}</li>
+				<li v-else-if="t.startsWith('I')">Hello {{t}}</li>
+				<li v-else>Unknown</li>
+			</element>
+		</ul>
+	</div>
+	<script type="text/javascript" src="vue.min.js"></script>
+	<script type="text/javascript">
+		var vue = new Vue({
+			el: '#app',
+			data: {
+				teman: ['Budi', 'Susi', 'Iwan', 'Agus'],
+				angka: [1,2,3,4,5,6,7,8,9,10],
+				nama: ''
+			},
+			methods: {
+				tambah: function() {
+					if (this.nama !== "") {
+						this.teman.push(this.nama)
+						this.nama = ""
+					}
+				}
+			}
+		})
+	</script>
+</body>
+</html>

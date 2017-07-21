@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="app">
+		<component message="Hello"></component>
+		<component message="World"></component>
+		<input type="text" placeholder="Nama" v-model="entry.nama">
+		<input type="text" placeholder="Alamat" v-model="entry.alamat">
+		<input type="text" placeholder="Telepon" v-model="entry.telepon">
+		<button @click="tambah">Tambah</button>
+		<table>
+			<kontak v-bind:nama="k.nama" v-bind:alamat="k.alamat" v-bind:telepon="k.telepon" v-for="k in kontaks" @hapus-item="hapus"></kontak>
+		</table>
+	</div>
+	<script type="text/javascript" src="vue.min.js"></script>
+	<script type="text/javascript" src="kontak.js"></script>
+	<script type="text/javascript">
+		var Para = {
+			props: ['message'],
+			template: "<p>{{message}}</p>"
+		}
+
+		// component
+		/*var Kontak = {
+			props: ['nama', 'alamat', 'telepon'],
+			template: "<tr><td>{{nama}}</td><td>{{alamat}}</td><td>{{telepon}}</td><tr>"
+		}*/
+		/*
+		Vue.component('Kontak', {
+			props: ['nama', 'alamat', 'telepon'],
+			template: "<tr><td>{{nama}}</td><td>{{alamat}}</td><td>{{telepon}}</td><tr>"
+		})
+		*/
+
+		var vue = new Vue({
+			el: '#app',
+			components: {
+				"component": Para,
+				"kontak": Kontak,
+			},
+			data: {
+				kontaks: [{nama: "Budi", "alamat": "Jl. Asia", telepon: "1234"},
+						  {nama: "Agus", "alamat": "Jl. Thamrin", telepon: "5678"},
+						  {nama: "Susi", "alamat": "Jl. Pandu", telepon: "9012"},
+						  {nama: "Iwan", "alamat": "Jl. Sumatra", telepon: "3456"},
+						],
+				entry: { nama: '', alamat: '', telepon: ''}
+			},
+			methods: {
+				tambah: function() {
+					this.kontaks.push(this.entry)
+					this.entry = {nama: '', alamat: '', telepon: ''}
+				},
+				hapus: function(data) {
+					//console.log("hapus data " + data.nama + " " + data.alamat + " " + data.telepon)
+					this.kontaks = this.kontaks.filter(function(x) {
+						return x.nama != data.nama && x.alamat != data.alamat && x.telepon != data.telepon;
+					})
+				}
+			}
+		})
+	</script>
+</body>
+</html>
