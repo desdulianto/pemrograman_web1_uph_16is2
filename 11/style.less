@@ -1,0 +1,29 @@
+/* variable */
+@warna: red;
+
+h1 { color: @warna;  }
+p { color: @warna;  }
+p:hover { color: darken(@warna, 20%); }
+
+div.highlighted {
+	font-style: italic;
+
+	ul {
+		background-color: lighten(@warna, 20%);
+	}
+}
+
+// mixing
+
+@border1: 3px dashed green;
+.myborder() {
+	border-top: @border1;
+	border-left: @border1;
+}
+
+.myborder1(@tebal: 1px; @style: solid; @warna: black) {
+	border: @tebal @style @warna;
+}
+
+//p, div.hightlighted { .myborder(); }
+p { .myborder1(@tebal: 10px); }

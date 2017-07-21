@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		.content {
+			display: flex;
+			width: 100%;
+			flex-direction: row;
+		}
+		.sidebar-left {
+			flex: 0.4 0.4 auto;
+			height: 800px;
+			background-color: blue;
+
+		}
+		.sidebar-right {
+			flex: 0.6 0.6 auto;
+			height: 800px;
+			background-color: green;
+		}		
+		.main-content {
+			flex: 2 2 auto;
+			height: 800px;
+			background-color: yellow;
+		}
+	</style>
+</head>
+<body>
+	<div class="content">
+		<div class="sidebar-left"></div>
+		<div class="main-content"></div>
+		<div class="sidebar-right"></div>
+		<div class="sidebar-right"></div>
+		<div class="sidebar-right"></div>
+	</div>
+</body>
+</html>
